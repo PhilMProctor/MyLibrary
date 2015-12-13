@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col s12 m8 l6">
+            <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+            <!--[if lt IE 9]>
+              <script src="/js/html5shiv.js"></script>
+            <![endif]-->
+            <div class="form-signin">
+                <h3>Register a new user</h3>
+                <form action="/signup" method="POST">
+                <label for="name">First Name</label>
+                <input type="text" name="name" />
+                <label for="lastname">Last Name</label>
+                <input type="text" name="lastname" />
+                <label for="username">Username</label>
+                <input type="text" name="username" />
+                <label for="email">Email address</label>
+                <input type="text" name="email" />
+                <label for="password">Password</label>
+                <input type="password" name="password" />
+                <input type="submit" value="Create user" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

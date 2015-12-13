@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="col s12 m8 l6">
+
+			<h3>Login</h3>
+
+			{% if failed %}
+
+			    <strong>Login failed!</strong> Check your credentials and try again.
+
+			{% endif %}
+
+			<form class="form" action= "/login" method="POST">
+				<label for="username">Username</label>
+				<input type="text" value="{{ username }}" name="username"/>
+				<label for="password">Password</label>
+				<input type="password" name="password"/>
+				<button type="submit" class="btn">Login</button>
+			</form>
+
+			<a href="/forgot">Forgot password</a>
+		</div>
+	</div>
+</div>
+
+
+{% endblock content %}
